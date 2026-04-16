@@ -46,6 +46,8 @@ textarea.form-control { resize: none; height: 80px; }
 /*  */
 section{padding-top: 60px; padding-bottom: 60px;}
 
+
+
 /* =========================== Tabs section =========================================== */
   /* Section Headings */
 .main-title h2{color: #000000; font-size: 27px; font-weight: 800;}
@@ -83,6 +85,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
  .tabing-section .learn-more-link { color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 10px; transition: color 0.3s; }
  .tabing-section .learn-more-link:hover {color: #00A0E3;}
  /* Mobile specific fallback for the image */
+ /*   */
   .tabing-section .mobile-bg-image { width: 100%; height: 300px; background-image: url('./images/tab-section-img.jpg'); background-size: cover; background-position: center; margin-top: -20px;   position: relative; z-index: 1;}
  .tabing-section .services-tabs{margin-top: 40px;}
  .tabing-section{padding-top: 40px !important;}
@@ -121,7 +124,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 
 
-/* ============================================================================ */
+/* =============================== what-we-do-section ============================================= */
  /* Section Background with Image and Overlay */
  .what-we-do-section .main-title h2{color: #fff;}
  .what-we-do-section .main-title p{color: #fff;}
@@ -173,7 +176,47 @@ section{padding-top: 60px; padding-bottom: 60px;}
  .destinations-section .swiper-slide-active .flag-badge {transform: translateX(-50%) scale(0.9);}
 .destinations-section .flag-badge img {width: 45px;border-radius: 2px;}
         
-/* ====================================================================================================== */
+
+
+
+
+/* ========================================== Scholarship Section ============================================================== */
+
+ /* Main Section Wrapper */
+        /* .scholarship-section {  } */
+
+        /* Container for absolute positioning of pseudo-elements */
+.scholarship-section .overlap-wrapper { position: relative; z-index: 1; /* padding-bottom: 30px;  */ }
+        /* Bright Blue Background via ::before */
+ .scholarship-section .overlap-wrapper::before { content: ""; position: absolute; top: 40px; bottom: 0; left: -40px; right: 0%;  background-color: #00A0E3; z-index: -1; }
+        /* Small Dark Blue Square via ::after */
+.scholarship-section .overlap-wrapper::after {content: "";position: absolute; bottom: -20px; right: 3%;         width: 80px;height: 40px;background-color:#0D4375;z-index: 3;        }
+
+        /* Dark Purple Text Box */
+.scholarship-section .purple-text-box { background-color: #332F60; color: #ffffff; padding: 50px 45px;  margin-left: 20px;  position: relative;  z-index: 4;            margin-top: 80px;     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.15);  margin-bottom: -40px;}
+.scholarship-section .purple-text-box h2 {  font-weight: 700;  font-size: 25px;  margin-bottom: 20px;}
+.scholarship-section .purple-text-box p {  font-size: 14px;  line-height: 1.8;  color: #fff;  margin-bottom: 20px;}
+        /* Custom Bullet List */
+.scholarship-section .custom-bullet-list { list-style: none; padding-left: 0; margin-bottom: 30px;}
+.scholarship-section .custom-bullet-list li {  position: relative;  padding-left: 15px;  margin-bottom: 12px;  font-size: 17px; font-weight: 500;  color: #ffffff;}
+.scholarship-section .custom-bullet-list li::before { content: "•"; position: absolute;  left: 0;  top: -2px;  color: #ffffff;  font-size: 1.2rem;}
+
+        /* Read More Link */
+.scholarship-section .read-more-link {color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s ease;}
+.scholarship-section .read-more-link:hover {color: #00A0E3;}
+        /* Image Container */
+.scholarship-section .image-container { position: relative; z-index: 2;   margin-left: -80px;   margin-right: 5%;}
+.scholarship-section .image-container img { width: 95%; height: 410px; object-fit: cover; display: block; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);}
+
+        /* Responsive Adjustments for Mobile/Tablet */
+        @media (max-width: 991px) {
+            .scholarship-section .purple-text-box { margin-top: 0; margin-bottom: -50px;  }
+            .scholarship-section .image-container { margin-left: 0;  }
+            .scholarship-section .overlap-wrapper::before {right: 0;top: 0;}
+            .scholarship-section .overlap-wrapper::after { right: 5%;}
+        }
+
+
 
 
 
@@ -209,6 +252,9 @@ section{padding-top: 60px; padding-bottom: 60px;}
         </div>
         <a href="#" class="btn-call-now">Call Now To Get Started</a>
     </nav>
+
+<!-- ================================== Hero Section =========================================== -->
+
 <!-- <section> -->
     <div class="hero-container">
         <div class="hero-bg">
@@ -283,6 +329,8 @@ section{padding-top: 60px; padding-bottom: 60px;}
         </div>
     </div>
 <!-- </section>     -->
+
+<!-- ================================== Tabing Section =========================================== -->
 
 
 <section class="tabing-section">
@@ -375,6 +423,11 @@ section{padding-top: 60px; padding-bottom: 60px;}
     </div>
 </section>
 
+
+
+<!-- ================================== Three box Section =========================================== -->
+
+
 <section class="three-box-section">
     <div class="container">
         <div class="text-center main-title">
@@ -431,6 +484,9 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 
 </section>
+
+
+<!-- ================================== What we do Section =========================================== -->
 
 
 <section class="what-we-do-section">
@@ -503,7 +559,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 
 
-
+<!-- ================================== Destination Section =========================================== -->
 
  <section class="destinations-section">
         <div class="container text-center main-title">
@@ -619,6 +675,37 @@ section{padding-top: 60px; padding-bottom: 60px;}
     </section>
 
 
+
+<section class="scholarship-section">
+        <div class="container">
+            <div class="overlap-wrapper">
+                <div class="row align-items-start">
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="purple-text-box">
+                            <h2>About Scholarship</h2>
+                            <p>For international students aspiring to study in the UK, a foundation course is often the first step toward gaining admission to a UK university. These courses are designed to bridge the gap between education systems.</p>
+                            
+                            <ul class="custom-bullet-list">
+                                <li>Save Lakhs with Scholarships</li>
+                                <li>Financial planning support</li>
+                                <li>Education loan guidance</li>
+                            </ul>
+                            
+                            <a href="#" class="read-more-link">READ MORE &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="image-container">
+                            <img src="./images/overlap-img.jpg" alt="Students writing exam in classroom">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>
 
 
 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Scholarship Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-cyan: #00a0e3;
+            --brand-purple: #353263;
+            --brand-dark-blue: #164376;
+            --text-light-gray: #c9c9df;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Main Section Wrapper */
+        .scholarship-section {
+            padding: 100px 0;
+            overflow: hidden; /* Prevents horizontal scroll on smaller screens */
+        }
+
+        /* Container for absolute positioning of pseudo-elements */
+        .overlap-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 30px; /* Space for the bottom overhang */
+        }
+
+        /* Bright Blue Background via ::before */
+        .overlap-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 40px;          /* Starts below the image top edge */
+            bottom: 0;          /* Extends to the bottom */
+            left: -15px;        /* Bleeds slightly to the left */
+            right: 10%;         /* Stops before the right edge of the image */
+            background-color: var(--brand-cyan);
+            z-index: -1;        /* Pushes it to the very back */
+        }
+
+        /* Small Dark Blue Square via ::after */
+        .overlap-wrapper::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: 12%;         /* Aligns with the design's right side */
+            width: 75px;
+            height: 75px;
+            background-color: var(--brand-dark-blue);
+            z-index: 3;         /* Sits above the background and image */
+        }
+
+        /* Dark Purple Text Box */
+        .purple-text-box {
+            background-color: var(--brand-purple);
+            color: #ffffff;
+            padding: 50px 45px;
+            position: relative;
+            z-index: 4;         /* Highest z-index to sit in front of the image */
+            margin-top: 80px;   /* Pushes it down to create the staggered top edge */
+            box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .purple-text-box h2 {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .purple-text-box p {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            color: var(--text-light-gray);
+            margin-bottom: 20px;
+        }
+
+        /* Custom Bullet List */
+        .custom-bullet-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        .custom-bullet-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .custom-bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: -2px;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        /* Read More Link */
+        .read-more-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .read-more-link:hover {
+            color: var(--brand-cyan);
+        }
+
+        /* Image Container */
+        .image-container {
+            position: relative;
+            z-index: 2; /* Sits between blue bg and purple text box */
+            margin-left: -80px; /* Pulls the image left to tuck UNDER the purple box */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Adjustments for Mobile/Tablet */
+        @media (max-width: 991px) {
+            .purple-text-box {
+                margin-top: 0;
+                margin-bottom: -50px; /* Overlap image vertically on mobile */
+            }
+            .image-container {
+                margin-left: 0; /* Remove horizontal overlap on small screens */
+            }
+            .overlap-wrapper::before {
+                right: 0;
+                top: 0;
+            }
+            .overlap-wrapper::after {
+                right: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="scholarship-section">
+        <div class="container">
+            <div class="overlap-wrapper">
+                <div class="row align-items-start">
+                    
+                    <div class="col-lg-5 col-md-12">
+                        <div class="purple-text-box">
+                            <h2>About Scholarship</h2>
+                            <p>For international students aspiring to study in the UK, a foundation course is often the first step toward gaining admission to a UK university. These courses are designed to bridge the gap between education systems.</p>
+                            
+                            <ul class="custom-bullet-list">
+                                <li>Save Lakhs with Scholarships</li>
+                                <li>Financial planning support</li>
+                                <li>Education loan guidance</li>
+                            </ul>
+                            
+                            <a href="#" class="read-more-link">READ MORE &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-12">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Students writing exam in classroom">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
