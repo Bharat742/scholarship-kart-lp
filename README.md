@@ -1,0 +1,1 @@
+# scholarship-kart-lp
