@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Choice Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-dark: #373265;
+            --primary-blue: #009ce8;
+            --text-muted-light: #9ea5c1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-weight: 800;
+            color: #000;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        .section-subtitle {
+            color: #5b708b;
+            font-size: 1rem;
+            margin-bottom: 50px;
+        }
+
+        /* Card Container Styling */
+        .prog-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        
+        .prog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image Box Styling */
+        .img-box {
+            height: 280px;
+            width: 100%;
+            background-color: #eee;
+        }
+        
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text Box Styling */
+        .text-box {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 40px 30px;
+            position: relative;
+            flex-grow: 1; /* Ensures bottom boxes fill remaining space evenly */
+        }
+
+        /* The Specific Curved Corners from your design */
+        /* For Text on Top (Card 1 & 3) */
+        .text-box.box-top {
+            border-bottom-right-radius: 70px;
+            z-index: 2; /* Keeps the curve above the image background */
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+        }
+
+        /* For Text on Bottom (Card 2) */
+        .text-box.box-bottom {
+            border-top-right-radius: 70px;
+            z-index: 2;
+            box-shadow: 5px -5px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Adjust image positioning to slide under the curved box */
+        .img-under-top {
+            margin-top: -30px; /* Pulls image up under the top text box curve */
+        }
+        .img-under-bottom {
+            margin-bottom: -30px; /* Pulls image down under the bottom text box curve */
+        }
+
+        /* Typography & Icons inside the cards */
+        .text-box h4 {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            width: 80%; /* Leaves room for the icon */
+        }
+
+        .text-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-muted-light);
+            margin-bottom: 0;
+            width: 90%;
+        }
+
+        .card-icon {
+            position: absolute;
+            top: 35px;
+            right: 25px;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Get Into The Programme Of Your Choice</h2>
+            <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="prog-card">
+                    <div class="text-box box-top">
+                        <i class="fa-solid fa-list-check card-icon"></i>
+                        <h4>Foundation</h4>
+                        <p>Playing With Numbers As A Part Of The Daily Work Is Not As Easy As It May Seem..</p>
+                    </div>
+                    <div class="img-box img-under-top">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Foundation Students">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="prog-card">
+                    <div class="img-box img-under-bottom">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Undergraduate Students">
+                    </div>
+                    <div class="text-box box-bottom">
+                        <i class="fa-solid fa-address-card card-icon"></i>
+                        <h4>Undergraduate</h4>
+                        <p>Playing With Numbers As A Part Of The Daily Work Is Not As Easy As It May Seem..</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="prog-card">
+                    <div class="text-box box-top">
+                        <i class="fa-solid fa-clipboard-check card-icon"></i>
+                        <h4>Postgraduate</h4>
+                        <p>Playing With Numbers As A Part Of The Daily Work Is Not As Easy As It May Seem..</p>
+                    </div>
+                    <div class="img-box img-under-top">
+                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Postgraduate Students">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

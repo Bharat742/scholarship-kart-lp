@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-dark: #373468;
+            --primary-blue: #00a0df;
+            --text-muted: #6a7487;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-weight: 800;
+            color: #000;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            color: #557298;
+            font-size: 0.95rem;
+            margin-bottom: 50px;
+        }
+
+        /* Vertical Tabs Styling */
+        .services-tabs .nav-link {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .services-tabs .nav-link:hover {
+            background-color: #2b2853;
+        }
+
+        /* Active Tab with Triangle Pointer */
+        .services-tabs .nav-link.active {
+            background-color: var(--primary-blue) !important;
+            color: white;
+        }
+
+        /* CSS Triangle pointing to the right */
+        .services-tabs .nav-link.active::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -12px; /* Pulls the triangle outside the button */
+            transform: translateY(-50%);
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 12px solid var(--primary-blue);
+        }
+
+        /* Overlapping Layout inside Tab Panes */
+        .overlap-container {
+            display: flex;
+            align-items: stretch;
+            min-height: 380px;
+        }
+
+        .overlap-content-box {
+            width: 45%;
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 40px;
+            z-index: 2; /* Keeps box above the image */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .overlap-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .overlap-content-box h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .overlap-content-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #d1d1e0;
+            margin-bottom: 25px;
+        }
+
+        .learn-more-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+
+        .learn-more-link:hover {
+            color: var(--primary-blue);
+        }
+
+        .overlap-image-box {
+            width: 65%;
+            margin-left: -10%; /* Creates the overlap effect */
+            z-index: 1; /* Pushes image behind the dark box */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .services-tabs .nav-link.active::after {
+                display: none; /* Hide arrow on mobile to prevent overflow */
+            }
+            .overlap-container {
+                flex-direction: column;
+            }
+            .overlap-content-box {
+                width: 100%;
+                padding: 30px;
+            }
+            .overlap-image-box {
+                width: 100%;
+                margin-left: 0;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-12 mb-4">
+                <div class="nav flex-column nav-pills services-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    
+                    <button class="nav-link active" id="v-pills-planning-tab" data-bs-toggle="pill" data-bs-target="#v-pills-planning" type="button" role="tab" aria-controls="v-pills-planning" aria-selected="true">
+                        Planning Stage
+                    </button>
+                    
+                    <button class="nav-link" id="v-pills-application-tab" data-bs-toggle="pill" data-bs-target="#v-pills-application" type="button" role="tab" aria-controls="v-pills-application" aria-selected="false">
+                        Application Stage
+                    </button>
+                    
+                    <button class="nav-link" id="v-pills-execution-tab" data-bs-toggle="pill" data-bs-target="#v-pills-execution" type="button" role="tab" aria-controls="v-pills-execution" aria-selected="false">
+                        Execution Stage
+                    </button>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-md-12">
+                <div class="tab-content" id="v-pills-tabContent">
+                    
+                    <div class="tab-pane fade show active" id="v-pills-planning" role="tabpanel" aria-labelledby="v-pills-planning-tab">
+                        <div class="overlap-container">
+                            <div class="overlap-content-box">
+                                <div class="overlap-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                                <h3>Planning Stage</h3>
+                                <p>ScholarshipKart is an IT-enabled education consultancy focused on helping students plan their international education with accurate, real-time information on universities.</p>
+                                <a href="#" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                            <div class="overlap-image-box" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-application" role="tabpanel" aria-labelledby="v-pills-application-tab">
+                        <div class="overlap-container">
+                            <div class="overlap-content-box">
+                                <div class="overlap-icon"><i class="fa-solid fa-file-signature"></i></div>
+                                <h3>Application Stage</h3>
+                                <p>We assist you in building a strong profile, shortlisting the right universities, and meticulously preparing all necessary documentation to ensure a flawless application process.</p>
+                                <a href="#" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                            <div class="overlap-image-box" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-execution" role="tabpanel" aria-labelledby="v-pills-execution-tab">
+                        <div class="overlap-container">
+                            <div class="overlap-content-box">
+                                <div class="overlap-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                                <h3>Execution Stage</h3>
+                                <p>From visa interview preparation to securing accommodations and pre-departure briefings, we ensure you are fully prepared for your journey abroad.</p>
+                                <a href="#" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                            <div class="overlap-image-box" style="background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

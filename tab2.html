@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services Section - Corrected Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-dark: #373468;
+            --primary-blue: #00a0df;
+            --text-muted: #6a7487;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-weight: 800;
+            color: #000;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            color: #557298;
+            font-size: 0.95rem;
+            margin-bottom: 50px;
+        }
+
+        /* Vertical Tabs Styling */
+        .services-tabs .nav-link {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .services-tabs .nav-link:hover {
+            background-color: #2b2853;
+        }
+
+        /* Active Tab with Triangle Pointer */
+        .services-tabs .nav-link.active {
+            background-color: var(--primary-blue) !important;
+            color: white;
+        }
+
+        /* CSS Triangle pointing to the right */
+        .services-tabs .nav-link.active::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -14px; /* Pushes the triangle outside the button */
+            transform: translateY(-50%);
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-left: 14px solid var(--primary-blue);
+            z-index: 10;
+        }
+
+        /* --- NEW LAYOUT STYLING ---
+        */
+        
+        /* The single static image on the right (Desktop) */
+        .desktop-bg-image {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 15px; /* Aligns perfectly with the Bootstrap container edge */
+            width: 60%; /* Takes up 60% of the container width, slipping right under the middle column */
+            background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: 1; /* Keeps it in the background */
+        }
+
+        /* The Purple Content Box (Middle) */
+        .service-content-box {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 50px 40px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 2; /* Brings the purple box strictly ABOVE the background image */
+        }
+
+        .service-content-box .overlap-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-content-box h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-content-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #d1d1e0;
+            margin-bottom: 25px;
+        }
+
+        .learn-more-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+
+        .learn-more-link:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Mobile specific fallback for the image */
+        .mobile-bg-image {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            margin-top: -20px; /* Slight overlap on mobile */
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 991px) {
+            .services-tabs .nav-link.active::after {
+                display: none; /* Hide pointer arrow on mobile */
+            }
+            .service-content-box {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
+        </div>
+
+        <div class="position-relative py-3">
+            
+            <div class="desktop-bg-image d-none d-lg-block"></div>
+
+            <div class="row position-relative z-2">
+                
+                <div class="col-lg-3 col-md-12 mb-4 pe-lg-4">
+                    <div class="nav flex-column nav-pills services-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-planning-tab" data-bs-toggle="pill" data-bs-target="#v-pills-planning" type="button" role="tab" aria-selected="true">
+                            Planning Stage
+                        </button>
+                        <button class="nav-link" id="v-pills-application-tab" data-bs-toggle="pill" data-bs-target="#v-pills-application" type="button" role="tab" aria-selected="false">
+                            Application Stage
+                        </button>
+                        <button class="nav-link" id="v-pills-execution-tab" data-bs-toggle="pill" data-bs-target="#v-pills-execution" type="button" role="tab" aria-selected="false">
+                            Execution Stage
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 mb-4">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        
+                        <div class="tab-pane fade show active" id="v-pills-planning" role="tabpanel">
+                            <div class="service-content-box">
+                                <div class="overlap-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                                <h3>Planning Stage</h3>
+                                <p>ScholarshipKart is an IT-enabled education consultancy focused on helping students plan their international education with accurate, real-time information on universities.</p>
+                                <div>
+                                    <a href="#" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-application" role="tabpanel">
+                            <div class="service-content-box">
+                                <div class="overlap-icon"><i class="fa-solid fa-file-signature"></i></div>
+                                <h3>Application Stage</h3>
+                                <p>We assist you in building a strong profile, shortlisting the right universities, and meticulously preparing all necessary documentation to ensure a flawless application process.</p>
+                                <div>
+                                    <a href="#" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-execution" role="tabpanel">
+                            <div class="service-content-box">
+                                <div class="overlap-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                                <h3>Execution Stage</h3>
+                                <p>From visa interview preparation to securing accommodations and pre-departure briefings, we ensure you are fully prepared for your journey abroad.</p>
+                                <div>
+                                    <a href="#" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 d-block d-lg-none">
+                    <div class="mobile-bg-image"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
