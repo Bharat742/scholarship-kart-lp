@@ -22,9 +22,11 @@ body {font-family: 'Montserrat', sans-serif;background-color: #fff;}
         /* Hero Section Styling */
 .hero-container { margin: 0 4% 50px 4%; position: relative; }
 .hero-bg {  background: linear-gradient(180deg, rgba(51, 47, 96, 0) 0%, rgba(51, 47, 96, 0.81) 100%), url('./images/banner\ img.jpg') center/cover no-repeat; border-radius: 40px; padding: 50px 4% 100px 4%;  color: white; }
-.hero-heading { font-size: 43px; font-weight: 800; line-height: 1.1; margin-bottom: 20px;}
-.hero-subheading {font-size: 21px;font-weight: 500;max-width: 85%;}
+.hero-heading { font-size: 40px; font-weight: 800; line-height: 1.1; margin-bottom: 20px;}
+.hero-subheading {font-size: 20px;font-weight: 500;max-width: 85%;}
         /* Form Card Styling */
+.form-card form .row .col-md-6:first-child{padding-right: 2px;}
+.form-card form .row .col-md-6:last-child{padding-left: 2px;}
 .form-card {background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); color: #333;}
 .form-card .form-control,.form-card .form-select{margin-bottom: 7px; border: 1px solid #332F60; font-size: 12px;}
 .form-card .form-control::placeholder,.form-card .form-select::placeholder{color: #332F60; font-size: 12px;}
@@ -45,6 +47,7 @@ textarea.form-control { resize: none; height: 80px; }
 .whatsapp-float:hover { color: white; background-color: #20b858;}
 /*  */
 section{padding-top: 60px; padding-bottom: 60px;}
+.scholarship-section{padding-top: 0px;}
 
 
 
@@ -394,6 +397,7 @@ section.testimonials-section{padding-top: 80px;}
 .contact-section .minimal-input{font-size:16px; padding: 10px 5px 10px 5px;}
 .contact-section .btn-talk-expert{padding: 10px 20px;font-size: 16px;margin-top: 10px;	}
  .destinations-section .swiper-slide.swiper-slide-active{margin-right: 30px !important; margin-left: 10px !important;}
+ .scholarship-section .overlap-wrapper::after{content: unset;}
 
 }
 @media (max-width: 575px){
@@ -444,9 +448,9 @@ section.testimonials-section{padding-top: 80px;}
         <div class="hero-bg">
             <div class="row align-items-end">
                 
-                <div class="col-lg-7 mb-lg-5 mb-lg-0">
+                <div class="col-lg-7 mb-lg-0">
                     <h1 class="hero-heading">Get Into Top Global Universities with Expert Guidance</h1>
-                    <p class="hero-subheading">End-to-end study abroad support from counselling to visa & scholarships</p>
+                    <p class="hero-subheading">End-to-end study abroad support from counselling <br> to visa & scholarships</p>
                 </div>
 
                 <div class="col-lg-5">
