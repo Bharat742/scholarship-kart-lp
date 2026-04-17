@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarship Kart - Global Education</title>
+    <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style> 
 body {font-family: 'Montserrat', sans-serif;background-color: #fff;}
         /* Navbar Styling */
@@ -143,19 +143,15 @@ section{padding-top: 60px; padding-bottom: 60px;}
 .what-we-do-section .learn-more-link:hover {color: #00a0df;  }
         /* Vertical Dividers (Desktop Only) */
         /* Default styles for desktop */
- @media (min-width: 992px) {
-     .what-we-do-section .feature-col:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 80px;  bottom: 20px;  width: 1px; background-color: #FFFFFF; /* Faint white line */}
-}
+
      
 
 /* ========================================  Destinations Section ============================================================== */
- .destinations-section {
-            /* padding: 80px 0; */
-        }
+ /* .destinations-section {  } */
         /* Swiper Container */
-.destinations-section .swiper-container { width: 130%; padding-top: 50px;   padding-bottom: 30px;  overflow: visible; }
+.destinations-section .swiper-container { width: 100%; padding-top: 50px;   padding-bottom: 30px;  overflow: visible; }
         /* Individual Slide Styling */
-.destinations-section .swiper-slide {transition: all 0.4s ease; /* width: 300px !important;   */ transform: scale(0.9);   opacity: 0.85; height: auto; display: flex; justify-content: center;}
+.destinations-section .swiper-slide {transition: all 0.4s ease; /* width: 300px !important;    transform: scale(0.9);   opacity: 0.85;*/ height: auto; display: flex; justify-content: center;}
         /* Active Slide Scaling Effect */
  .destinations-section .swiper-slide.swiper-slide-active {transform: scale(1.1); /* Enlarges the first/active slide */opacity: 1; z-index: 2;}
         /* Card Container */
@@ -208,6 +204,129 @@ section{padding-top: 60px; padding-bottom: 60px;}
 .scholarship-section .image-container { position: relative; z-index: 2;   margin-left: -80px;   margin-right: 5%;}
 .scholarship-section .image-container img { width: 95%; height: 410px; object-fit: cover; display: block; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);}
 
+
+
+
+
+/* ========================================== Two Swiper Section ============================================================== */
+/*  */
+
+ /* .partners-section {padding: 80px 0;background-color: #fcfcfc;} */
+        /* Swiper Container & Wrapper configurations for continuous scroll */
+ .partners-section .swiper-container {width: 100%;padding: 15px 0;}
+        /* This is the magic CSS that makes the Swiper scroll continuously without snapping */
+.partners-section  .swiper-wrapper { transition-timing-function: linear !important; }
+        /* Logo Card Styling */
+.partners-section .partner-card {background-color: #ffffff;border-radius: 12px; /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04); */ box-shadow: 0px 20px 50px 0px #3131310D; height: 90px; display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid rgba(0,0,0,0.02); transition: box-shadow 0.3s ease;}
+.partners-section .partner-card:hover {box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);}
+.partners-section .partner-card img {  max-width: 100%;  max-height: 100%;  object-fit: contain;  /* opacity: 0.8; */  transition: opacity 0.3s ease;}
+        /* .partner-card:hover img { opacity: 1; } */
+        /* Adding a bit of space between the two rows */
+        /*  */
+.partners-section .bottom-row {margin-top: 15px;}
+
+
+
+
+/* ========================================== Why Choose Us Section ============================================================== */
+ .why-choose-section {/* padding: 80px 0; *//* background-image: url('./images/choose-us-background-img.jpg');
+            background-size: cover;
+            background-position: center; */ 
+            position: relative; }
+
+        /* Overlay to darken the background slightly if needed */
+.why-choose-section::before { content: ''; position: absolute;  background-image: url('./images/choose-us-background-img.jpg'); background-size: cover; background-position: bottom; top: 0%; left: 5%; right: 5%; bottom: 0%; background-color: rgba(255, 255, 255, 0.1); }
+        /* Dark Purple Card */
+ .why-choose-section .purple-card { background: #332F60F0;color: #ffffff; position: relative; z-index: 2; padding: 40px 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);}
+        /* Left Side Text Content */
+.why-choose-section .purple-card h2 { font-weight: 700; font-size: 24px; margin-bottom: 10px; }
+ .why-choose-section .purple-card p { font-size: 15px; line-height: 1.8; color: #fff;  margin-bottom: 20px;}
+        /* Icon Grid Styling */
+ .why-choose-section .icon-box {text-align: center;margin-bottom: 25px;}
+ .why-choose-section .icon-box img{width: 35px; margin-bottom: 5px;}
+.why-choose-section .icon-box i { font-size: 1.8rem; margin-bottom: 15px; color: #ffffff;}
+ .why-choose-section .icon-box h6 {font-size: 15px;font-weight: 400;line-height: 1.4;color: #ffffff;margin: 0;}
+        /* Right Side Image Overlap Effect */
+ .why-choose-section .image-col-wrapper { position: relative; height: 100%; width: 100%; min-height: 380px;  }
+  .why-choose-section .overlap-image { position: absolute; top: 20px;              bottom: -50px;          left: 25px;              right: 15px; width: calc(100% - 30px); height: calc(100% + 110px);   object-fit: cover; /* box-shadow: -10px 10px 30px rgba(0,0,0,0.3); */}
+
+
+
+
+/* ========================================== Testimonial Section ============================================================== */
+
+ /* Section Headings */
+section.testimonials-section{padding-top: 80px;}
+        /* Swiper Container */
+.testimonials-section .swiper-container {width: 100%; padding: 20px 10px 40px 10px; }
+        /* Testimonial Card Styling */
+.testimonials-section .testi-card { background: #ffffff; border-radius: 12px;  box-shadow: 2.34px 2.34px 17px 0px #00000030; text-align: center; position: relative; overflow: visible;   }
+        /* The Curved Dark Purple Top */
+.testimonials-section .card-top {background-color: #332F60;color: white; padding: 25px 20px 55px 20px;  border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 50% 25px; border-bottom-right-radius: 50% 25px; }
+ .testimonials-section .card-top h6 { font-size: 12px; font-weight: 600; margin-bottom: 8px; letter-spacing: 0.5px;}
+.testimonials-section .stars {display: flex; align-items: center; justify-content: center; gap: 3px; }
+.testimonials-section .stars img{width: 12px;}
+        /* Circular Profile Image overlapping the curve */
+.testimonials-section .profile-img-wrapper { position: absolute;/* top: 75px;left: 50%;transform: translateX(-50%); */top: 0;left: 0;right: 0;bottom: 0;margin: auto;padding-top: 70px; z-index: 2;}
+.testimonials-section .profile-img-wrapper img { width: 85px; height: 85px; border-radius: 50%;  object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        /* Bottom Text Content */
+.testimonials-section .card-bottom {padding: 50px 20px 30px 20px;    }
+.testimonials-section .card-bottom h5 { font-size: 15px; font-weight: 700; color: #0F1125; margin-bottom: 2px;}
+.testimonials-section .card-bottom .designation { font-size: 10px; color: #717276; margin-bottom: 15px;}
+.testimonials-section .card-bottom .review { font-size: 11px; color: #0F1125; line-height: 1.6; margin: 0;}
+
+
+
+
+
+/* ========================================== Footer Section ============================================================== */
+
+ /* Main Contact Section Padding */
+.contact-section {padding-top: unset;padding-bottom: 20px;}
+        /* Minimalist Input Fields */
+.contact-section .contact-form { max-width: 800px; margin: 0 auto;}
+.contact-section .minimal-input { width: 100%; border: none; border-bottom: 1.5px solid #0D4375; border-radius: 0; padding: 10px 5px 15px 5px; font-size: 19px; color: #0D437580; background-color: transparent; outline: none; transition: border-color 0.3s ease;}
+        /* Placeholder color styling */
+ .contact-section .minimal-input::placeholder { color: #8ba4b4; font-weight: 400;}
+        /* Focus state for inputs */
+.contact-section .minimal-input:focus { border-bottom: 2px solid #1e4b7a;  box-shadow: none;}
+        /* Talk to Expert Button / Link */
+.contact-section  .btn-talk-expert { background: transparent; border: none; color: #0D4375; font-weight: 600; font-size: 19px; letter-spacing: 0.5px; padding: 15px 30px; margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; transition: color 0.3s ease; text-transform: uppercase;}
+.contact-section  .btn-talk-expert:hover { color: #0D4375; }
+.contact-section  .btn-talk-expert i {font-weight: 300;font-size: 1.2rem;transition: transform 0.3s ease;}
+        /* Arrow hover effect */
+.contact-section  .btn-talk-expert:hover i { transform: translateX(5px);}
+        /* Bottom Copyright Strip */
+ .copyright-strip { background-color: #332F60;  padding: 20px 0; text-align: center;}
+  .copyright-strip p { margin: 0; color: #fff; font-size: 12px; font-weight: 400; letter-spacing: 0.3px;}
+
+
+        /* Responsive spacing for mobile */
+        @media (max-width: 768px) {
+            .contact-form .row > div {
+                margin-bottom: 30px;
+            }
+        }
+        /* Responsive Adjustments for Mobile & Tablet */
+        @media (max-width: 991px) {
+            .purple-card {
+                padding: 40px 30px;
+            }
+            .overlap-image {
+                position: relative;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 350px;
+                margin-top: 40px;
+                margin-bottom: -70px;  
+            }
+        }
+
+ @media (min-width: 992px) {
+     .what-we-do-section .feature-col:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 80px;  bottom: 20px;  width: 1px; background-color: #FFFFFF; /* Faint white line */}
+}
         /* Responsive Adjustments for Mobile/Tablet */
         @media (max-width: 991px) {
             .scholarship-section .purple-text-box { margin-top: 0; margin-bottom: -50px;  }
@@ -215,12 +334,6 @@ section{padding-top: 60px; padding-bottom: 60px;}
             .scholarship-section .overlap-wrapper::before {right: 0;top: 0;}
             .scholarship-section .overlap-wrapper::after { right: 5%;}
         }
-
-
-
-
-
-
 
         /* Responsive Design */
  @media (max-width: 991px) {
@@ -568,7 +681,8 @@ section{padding-top: 60px; padding-bottom: 60px;}
         </div>
 
         <div class="container-fluid px-0 overflow-hidden">
-            <div class="container">
+            <div class="row">
+                <div class="col-lg-11 offset-lg-1">
                 <div class="swiper study-main-swiper swiper-container">
                     <div class="swiper-wrapper">
                         
@@ -639,7 +753,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/canada-2.jpg');">
                                     <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in USA</h3>
+                                    <h3 class="card-title">Study in USA 2</h3>
                                 </div>
                             </div>
                         </div>
@@ -651,7 +765,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/Australia-3.jpg');">
                                     <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in USA</h3>
+                                    <h3 class="card-title">Study in USA 3</h3>
                                 </div>
                             </div>
                         </div>
@@ -663,17 +777,20 @@ section{padding-top: 60px; padding-bottom: 60px;}
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/ireland-4.jpg');">
                                     <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in USA</h3>
+                                    <h3 class="card-title">Study in USA 4</h3>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+                </div>
             </div>
         </div>
     </section>
 
+
+<!-- ================================== Scholarship Section =========================================== -->
 
 
 <section class="scholarship-section">
@@ -709,14 +826,316 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 
 
+<!-- ================================== Two Swiper Section =========================================== -->
+
+<section class="partners-section">
+        <div class="container text-center main-title">
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
+        </div>
+
+        <div class="container-fluid px-0">
+            
+            <div class="swiper swiper-container top-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/Logo-1.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-3.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-4.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-5.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-6.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-7.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-8.png" alt="Partner"></div></div>
+                </div>
+            </div>
+
+            <div class="swiper swiper-container bottom-swiper bottom-row">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/Logo-1.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-3.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-4.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-5.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-6.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-7.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-8.png" alt="Partner"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+<!-- ================================== Why Choose Us Section =========================================== -->
+
+ <section class="why-choose-section">
+        <div class="container">
+            <div class="purple-card">
+                <div class="row align-items-stretch">
+                    
+                    <div class="col-lg-6 pe-lg-5">
+                        <h2>Why Choose Us</h2>
+                        <p>The United Kingdom is one of the world's top destinations for higher education, offering a wide range of undergraduate degrees across various disciplines with globally recognised standards.</p>
+                        
+                        <div class="row text-center">
+                            
+                            <div class="col-4">
+                                <div class="icon-box">
+                                    <!-- <i class="fa-solid fa-user-group"></i> -->
+                                     <img src="./images/choose-icon-1.png" alt="icon">
+                                    <h6>Personalized<br>1:1 counselling</h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="icon-box">
+                                    <!-- <i class="fa-solid fa-handshake"></i> -->
+                                     <img src="./images/choose-icon-2.png" alt="icon">
+                                    <h6>Strong university<br>tie-ups</h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="icon-box">
+                                    <!-- <i class="fa-solid fa-headset"></i> -->
+                                     <img src="./images/choose-icon-3.png" alt="icon">
+                                    <h6>End-to-end<br>support</h6>
+                                </div>
+                            </div>
+                            
+                            <div class="col-4">
+                                <div class="icon-box">
+                                    <!-- <i class="fa-solid fa-chalkboard-user"></i> -->
+                                     <img src="./images/choose-icon-4.png" alt="icon">
+                                    <h6>In-house IELTS<br>coaching</h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="icon-box">
+                                    <!-- <i class="fa-solid fa-graduation-cap"></i> -->
+                                     <img src="./images/choose-icon-5.png" alt="icon">
+                                    <h6>Scholarship<br>access</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="image-col-wrapper">
+                            <img src="./images/choose-us-banner.jpg" alt="Students celebrating" class="overlap-image">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!-- ================================== Testimonial Section =========================================== -->
+
+<section class="testimonials-section">
+        <div class="container text-center main-title">
+            <h2 class="section-title">Students Trust Us</h2>
+            <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
+        </div>
+
+        <div class="container-fluid px-lg-5">
+            <div class="swiper swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="card-top">
+                                <h6>University name</h6>
+                                <div class="stars">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                </div>
+                            </div>
+                            <div class="profile-img-wrapper">
+                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                            </div>
+                            <div class="card-bottom">
+                                <h5>Dazzle Healer</h5>
+                                <p class="designation">Front End Developer</p>
+                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="card-top">
+                                <h6>University name</h6>
+                                <div class="stars">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                </div>
+                            </div>
+                            <div class="profile-img-wrapper">
+                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                            </div>
+                            <div class="card-bottom">
+                                <h5>Dazzle Healer</h5>
+                                <p class="designation">Front End Developer</p>
+                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="card-top">
+                                <h6>University name</h6>
+                                <div class="stars">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                </div>
+                            </div>
+                            <div class="profile-img-wrapper">
+                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                            </div>
+                            <div class="card-bottom">
+                                <h5>Dazzle Healer</h5>
+                                <p class="designation">Front End Developer</p>
+                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="card-top">
+                                <h6>University name</h6>
+                                <div class="stars">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                </div>
+                            </div>
+                            <div class="profile-img-wrapper">
+                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                            </div>
+                            <div class="card-bottom">
+                                <h5>Dazzle Healer</h5>
+                                <p class="designation">Front End Developer</p>
+                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="card-top">
+                                <h6>University name</h6>
+                                <div class="stars">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                </div>
+                            </div>
+                            <div class="profile-img-wrapper">
+                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                            </div>
+                            <div class="card-bottom">
+                                <h5>Dazzle Healer</h5>
+                                <p class="designation">Front End Developer</p>
+                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="card-top">
+                                <h6>University name</h6>
+                                <div class="stars">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="./images/Star.png" alt="Star">
+                                </div>
+                            </div>
+                            <div class="profile-img-wrapper">
+                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                            </div>
+                            <div class="card-bottom">
+                                <h5>Dazzle Healer</h5>
+                                <p class="designation">Front End Developer</p>
+                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ================================== Footer Section =========================================== -->
+
+
+<section class="contact-section">
+        <div class="container text-center">
+            <div class="text-center main-title">
+                <h2 class="contact-title">Contact Us</h2>
+                <p class="contact-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
+            </div>
+            <form class="contact-form">
+                <div class="row gx-5">
+                    
+                    <div class="col-md-6">
+                        <input type="text" class="minimal-input" placeholder="Name" required>
+                    </div>
+
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <input type="email" class="minimal-input" placeholder="Email" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-talk-expert">
+                    Talk to Expert <img src="./images/arrow.png" alt="Arrow">
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+    <div class="copyright-strip">
+        <p>Copyright 2025 Scholarshipkart</p>
+    </div>
 
 
 
 
 
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+
+
+
+<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+     <i class="fab fa-whatsapp"></i>
+</a>
 
 
 
@@ -731,25 +1150,114 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-
-
-        
-    <script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  
+    <!-- <script>
      const studySwiper = new Swiper('.study-main-swiper', {
-    loop: false,
+    loop: true,
     centeredSlides: false,    
     grabCursor: true,
 
     breakpoints: {
         320: { slidesPerView: 1.5, spaceBetween: 20 },
         768: { slidesPerView: 2.5, spaceBetween: 30 },
-        1024: { slidesPerView: 3.5, spaceBetween: 35 },
+        1024: { slidesPerView: 4.5, spaceBetween: 35 },
         1200: { slidesPerView: 4.5, spaceBetween: 30 }
-    }
+    },
 });
+    </script> -->
+
+<!-- =================== Destination Swiper script ============================ -->
+    <script>
+        const studySwiper = new Swiper('.study-main-swiper', {
+    loop: true,
+    slidesPerView: 3.5,
+    spaceBetween: 10,
+    // centeredSlides: false,
+    // grabCursor: true,
+    loopFillGroupWithBlank: true,
+    loopAdditionalSlides: 2, // important for fractional slides
+    breakpoints: {
+        320: { slidesPerView: 1.5, spaceBetween: 20 },
+        768: { slidesPerView: 2.5, spaceBetween: 30 },
+        1024: { slidesPerView: 4.1, spaceBetween: 10 },
+        1200: { slidesPerView: 4.1, spaceBetween: 10 }
+    },
+    });
+    </script>
+
+<!-- =================== Two Swiper script ============================ -->
+<script> 
+        const swiperConfig = {
+            spaceBetween: 20,
+            centeredSlides: false,
+            speed: 4000,  
+            autoplay: {
+                delay: 0, 
+                disableOnInteraction: false,  
+            },
+            loop: true,
+            loopedSlides: 8,
+            slidesPerView: 'auto',
+            allowTouchMove: false,  
+            breakpoints: {
+                320: { slidesPerView: 2.5 },
+                576: { slidesPerView: 3.5 },
+                768: { slidesPerView: 4.5 },
+                1024: { slidesPerView: 5.5 },
+                1200: { slidesPerView: 6.5 }
+            }
+        };
+
+        // Initialize Top Swiper (Scrolls Left by default)
+        const topSwiper = new Swiper('.top-swiper', {
+            ...swiperConfig
+        });
+
+        // Initialize Bottom Swiper (Scrolls Right)
+        const bottomSwiper = new Swiper('.bottom-swiper', {
+            ...swiperConfig,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                reverseDirection: true 
+            }
+        });
+    </script>
+
+<!-- ==================== Testimonial Swiper Script ===================== -->
+<script>
+        const swiper = new Swiper('.mySwiper', {
+            spaceBetween: 15,
+            grabCursor: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            // Responsive breakpoints to show 5 items on desktop as requested
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 15
+                },
+                576: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 15
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 15
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 15
+                }
+            }
+        });
     </script>
 
 </body>
