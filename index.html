@@ -319,8 +319,8 @@ section.testimonials-section{padding-top: 80px;}
                 left: 0;
                 width: 100%;
                 height: 350px;
-                margin-top: 40px;
-                margin-bottom: -70px;  
+                margin-top: 0px;
+                margin-bottom: 0px;  
             }
         }
 
@@ -355,6 +355,76 @@ section.testimonials-section{padding-top: 80px;}
             .floating-info-bar { position: relative; bottom: 0; left: 0; right: 0; margin-top: 20px; border-radius: 20px;}
             .hero-bg { padding-bottom: 60px; border-radius: 20px;}
         }
+
+@media (max-width:767px){
+    .main-title p{font-size: 13px;}
+     .main-title h2{font-size: 22px;}
+    br{display: none;}
+    section{padding-bottom: 30px; padding-top: 30px;}
+    .info-item:last-child{margin-bottom: 10px;}
+    .tabing-section .services-tabs .nav-link{margin-bottom: 10px;}
+    .tabing-section .services-tabs{margin-top: unset;}
+    .tabing-section .service-content-box{padding: 30px 40px; min-height: 300px;}
+    .what-we-do-section .feature-col{text-align: center; align-items: center;}
+    .scholarship-section .purple-text-box{margin-left: 40px; margin-top: 40px; margin-right: 40px;}
+    .scholarship-section .overlap-wrapper::before{left: 0; right: 0;}
+    .scholarship-section .image-container{margin-left: 10px; margin-right: 10px; margin-bottom: 10px;}
+    .scholarship-section .image-container img{width: 100%;}
+    .partners-section .partner-card{height: 50px; padding: 10px;}
+    .partners-section .swiper-container{padding: 10px 0;}
+    .why-choose-section .overlap-image{top: 0; bottom: 0; left: 0; right: 0; height: calc(100% + 0px); width: 100%;}
+    .why-choose-section .purple-card{padding: 20px 20px;}
+    .three-box-section .container .row{gap: 20px;}
+    .three-box-section .text-box.box-bottom{    border-bottom-right-radius: 20px; border-top-right-radius:unset;}
+    .what-we-do-section .section-header{margin-bottom: unset;}
+    .scholarship-section .purple-text-box{padding: 15px 15px; margin-left: 10px; margin-top: 10px; margin-right: 10px;}
+    .scholarship-section .purple-text-box h2{margin-bottom: 10px; font-size: 19px;}
+    .scholarship-section .purple-text-box p{font-size: 13px; margin-bottom: 10px;}
+    .scholarship-section .custom-bullet-list li{font-size: 15px; margin-bottom: 10px;}
+    .scholarship-section .custom-bullet-list{margin-bottom: 20px;}
+    .why-choose-section::before{content: unset;}
+    .why-choose-section .purple-card h2{font-size: 22px;}
+    .why-choose-section .purple-card p{margin-bottom: 10px; font-size: 14px;}
+    .why-choose-section .icon-box{margin-bottom: 15px;}
+    .why-choose-section .icon-box img{width: 25px;}
+    .why-choose-section .icon-box h6{font-size: 13px;}
+    section.testimonials-section{padding-top: 30px;}
+    .testimonials-section .swiper-container{padding: 10px;}
+    .contact-form .row > div{margin-bottom:10px;}
+.contact-section .minimal-input{font-size:16px; padding: 10px 5px 10px 5px;}
+.contact-section .btn-talk-expert{padding: 10px 20px;font-size: 16px;margin-top: 10px;	}
+
+}
+@media (max-width: 575px){
+    .navbar-custom  .logo img{width: 130px; height: auto;}
+    .btn-call-now{padding: 7px 12px; font-size: 10px;}
+    .hero-bg{border-radius: 15px;padding: 40px 4% 40px 4%;}
+.hero-heading{font-size: 23px; text-align: center;}
+.hero-subheading{font-size: 15px; text-align: center; max-width: 100%;}
+.form-card{padding: 15px;border-radius: 15px;}
+.form-card h3{font-size: 20px;}
+.btn-submit{font-size: 14px;}
+.hero-container{margin: 0 4% 0px 4%;}
+.info-text{font-size:14px;}
+.info-item{padding-left:15px;}
+.floating-info-bar{margin-top: 15px;border-radius: 15px;padding: 15px 0;}
+.info-icon img{width: 25px;}
+.tabing-section{padding-top: 30px !important;}
+.tabing-section .services-tabs .nav-link{font-size: 16px; padding: 10px 15px;}
+.tabing-section .service-content-box p{margin-bottom:15px;}
+.tabing-section .service-content-box h3{font-size: 20px;margin-bottom: 5px;}
+.tabing-section .service-content-box .overlap-icon img{width: 30px;}
+.tabing-section .service-content-box .overlap-icon{margin-bottom: 10px;}
+.tabing-section .service-content-box{padding: 20px 20px;}
+.three-box-section .prog-card{border-radius: 20px 0px 0px 20px;}
+.three-box-section .text-box{padding: 20px 20px;}
+.three-box-section .card-icon{top: 15px; right: 15px; width: 25px;}
+.three-box-section .text-box p{font-size: 13px;}
+.three-box-section .text-box h4{margin-bottom: 10px;}
+.what-we-do-section .feature-col{margin-bottom: 20px;}
+ .what-we-do-section .feature-icon,.what-we-do-section .feature-col p{margin-bottom: 10px;}
+.what-we-do-section .feature-col h3{font-size: 18px; margin-bottom: 10px;}
+}
     </style>
 </head>
 <body>
@@ -373,7 +443,7 @@ section.testimonials-section{padding-top: 80px;}
         <div class="hero-bg">
             <div class="row align-items-end">
                 
-                <div class="col-lg-7 mb-5 mb-lg-0">
+                <div class="col-lg-7 mb-lg-5 mb-lg-0">
                     <h1 class="hero-heading">Get Into Top Global Universities with Expert Guidance</h1>
                     <p class="hero-subheading">End-to-end study abroad support from counselling to visa & scholarships</p>
                 </div>
@@ -459,7 +529,7 @@ section.testimonials-section{padding-top: 80px;}
 
             <div class="row position-relative z-2">
                 
-                <div class="col-lg-3 col-md-12 mb-4 tab-click-btn pe-lg-2">
+                <div class="col-lg-3 col-md-12 mb-lg-4 tab-click-btn pe-lg-2">
                     <div class="nav flex-column nav-pills services-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active" id="v-pills-planning-tab" data-bs-toggle="pill" data-bs-target="#v-pills-planning" type="button" role="tab" aria-selected="true">
                             Planning Stage
@@ -548,7 +618,7 @@ section.testimonials-section{padding-top: 80px;}
             <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
         </div>
 
-        <div class="row g-5 justify-content-center pt-3">
+        <div class="row g-lg-5 justify-content-center pt-3">
             
             <div class="col-lg-4 col-md-6">
                 <div class="prog-card">
@@ -566,7 +636,7 @@ section.testimonials-section{padding-top: 80px;}
 
             <div class="col-lg-4 col-md-6">
                 <div class="prog-card">
-                    <div class="img-box img-under-bottom">
+                    <div class="img-box img-under-bottom d-md-block d-none">
                         <img src="./images/col-img-22.jpg" alt="Undergraduate Students">
                     </div>
                     <div class="text-box box-bottom">
@@ -574,6 +644,9 @@ section.testimonials-section{padding-top: 80px;}
                          <img class="card-icon" src="./images/col-2.png" alt="icon">
                         <h4>Undergraduate</h4>
                         <p>Playing With Numbers As A Part Of The Daily Work Is Not As Easy As It May Seem..</p>
+                    </div>
+                    <div class="img-box img-under-bottom d-md-none d-block">
+                        <img src="./images/col-img-22.jpg" alt="Undergraduate Students">
                     </div>
                 </div>
             </div>
@@ -882,21 +955,21 @@ section.testimonials-section{padding-top: 80px;}
                         
                         <div class="row text-center">
                             
-                            <div class="col-4">
+                            <div class="col-6 col-md-4">
                                 <div class="icon-box">
                                     <!-- <i class="fa-solid fa-user-group"></i> -->
                                      <img src="./images/choose-icon-1.png" alt="icon">
                                     <h6>Personalized<br>1:1 counselling</h6>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6 col-md-4">
                                 <div class="icon-box">
                                     <!-- <i class="fa-solid fa-handshake"></i> -->
                                      <img src="./images/choose-icon-2.png" alt="icon">
                                     <h6>Strong university<br>tie-ups</h6>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6 col-md-4">
                                 <div class="icon-box">
                                     <!-- <i class="fa-solid fa-headset"></i> -->
                                      <img src="./images/choose-icon-3.png" alt="icon">
@@ -904,14 +977,14 @@ section.testimonials-section{padding-top: 80px;}
                                 </div>
                             </div>
                             
-                            <div class="col-4">
+                            <div class="col-6 col-md-4">
                                 <div class="icon-box">
                                     <!-- <i class="fa-solid fa-chalkboard-user"></i> -->
                                      <img src="./images/choose-icon-4.png" alt="icon">
                                     <h6>In-house IELTS<br>coaching</h6>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6 col-md-4">
                                 <div class="icon-box">
                                     <!-- <i class="fa-solid fa-graduation-cap"></i> -->
                                      <img src="./images/choose-icon-5.png" alt="icon">
@@ -1178,7 +1251,7 @@ section.testimonials-section{padding-top: 80px;}
     loopFillGroupWithBlank: true,
     loopAdditionalSlides: 2, // important for fractional slides
     breakpoints: {
-        320: { slidesPerView: 1.5, spaceBetween: 20 },
+        320: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides:true },
         768: { slidesPerView: 2.5, spaceBetween: 30 },
         1024: { slidesPerView: 4.1, spaceBetween: 10 },
         1200: { slidesPerView: 4.1, spaceBetween: 10 }
@@ -1238,11 +1311,13 @@ section.testimonials-section{padding-top: 80px;}
             breakpoints: {
                 320: {
                     slidesPerView: 1.2,
-                    spaceBetween: 15
+                    spaceBetween: 15,
+                    centeredSlides: true
                 },
                 576: {
                     slidesPerView: 2.2,
-                    spaceBetween: 20
+                    spaceBetween: 20,
+                    centeredSlides: true
                 },
                 768: {
                     slidesPerView: 3,
