@@ -23,7 +23,7 @@ body {font-family: 'Montserrat', sans-serif;background-color: #fff;}
 .hero-container { margin: 0 4% 50px 4%; position: relative; }
 .hero-bg {  background: linear-gradient(180deg, rgba(51, 47, 96, 0) 0%, rgba(51, 47, 96, 0.81) 100%), url('./images/banner\ img.jpg') center/cover no-repeat; border-radius: 40px; padding: 50px 4% 100px 4%;  color: white; }
 .hero-heading { font-size: 40px; font-weight: 800; line-height: 1.1; margin-bottom: 20px;}
-.hero-subheading {font-size: 20px;font-weight: 500;max-width: 85%;}
+.hero-subheading {font-size: 20px;font-weight: 400;max-width: 85%;}
         /* Form Card Styling */
 .form-card form .row .col-md-6:first-child{padding-right: 2px;}
 .form-card form .row .col-md-6:last-child{padding-left: 2px;}
@@ -37,11 +37,21 @@ textarea.form-control { resize: none; height: 80px; }
  .btn-submit { background-color:#332F60; color: white; width: 100%; border-radius: 8px; padding: 7px; font-weight: 600; border: none;}
 .btn-submit:hover { background-color: #262448; color: #fff;}
         /* Bottom Floating Bar Styling */
-.floating-info-bar { background-color: #00A0E3; border-radius: 15px; padding: 20px 0; position: absolute; bottom: -35px;   left: 7%; right: 7%; color: white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);}
+.floating-info-bar {background-color: #00A0E3;
+    border-radius: 15px;
+    padding: 20px 50px;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    right: 0;
+    width: 85%;
+    margin: auto;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);}
 .info-item { display: flex; align-items: center; justify-content: center; gap: 15px; border-right: 1px solid #FFFFFF;}
 .col-lg-4:last-child .info-item { border-right: none;}
  .info-icon { background: white; color: #332F60; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.info-text { font-weight: 500; font-size: 17px;line-height: 1.2;  }
+.info-text { font-weight: 600; font-size: 16px;line-height: 1.2;  }
         /* WhatsApp Button */
  .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #20b858; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 100; display: flex; align-items: center; justify-content: center;  text-decoration: none;}
 .whatsapp-float:hover { color: white; background-color: #20b858;}
@@ -53,11 +63,11 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 /* =========================== Tabs section =========================================== */
   /* Section Headings */
-.main-title h2{color: #000000; font-size: 27px; font-weight: 800;}
+.main-title h2{color: #000000; font-size: 25px; font-weight: 800;}
 .main-title p{color: #0D4375; font-size: 14px; font-weight: 400;}
 
         /* Vertical Tabs Styling */
-.tabing-section .services-tabs .nav-link { background-color: #332F60; color: #ffffff; border-radius: 5px; padding: 15px 20px; margin-bottom: 40px; font-weight: 600; text-align: center; position: relative; transition: all 0.3s ease; border: none; font-size: 19px;}
+.tabing-section .services-tabs .nav-link { background-color: #332F60; color: #ffffff; border-radius: 5px; padding: 15px 20px; margin-bottom: 40px; font-weight: 700; text-align: center; position: relative; transition: all 0.3s ease; border: none; font-size: 19px;}
 
 .tabing-section .services-tabs .nav-link:hover { background-color: #2b2853;}
         /* Active Tab with Triangle Pointer */
@@ -81,10 +91,10 @@ section{padding-top: 60px; padding-bottom: 60px;}
 /* */
         /* The Purple Content Box (Middle) */
  .tabing-section .service-content-box {  background-color:#332F60;  color: white;  padding: 40px 50px;  min-height: 350px;  display: flex;  flex-direction: column;  justify-content: space-between;  box-shadow: 5px 0 15px rgba(0,0,0,0.15);  position: relative;  z-index: 2; }
- .tabing-section .service-content-box .overlap-icon {   margin-bottom: 30px;}
+ .tabing-section .service-content-box .overlap-icon {   margin-bottom: 40px;}
  .tabing-section .service-content-box .overlap-icon img{width: 40px;}
- .tabing-section .service-content-box h3 {  font-weight: 700;  font-size: 1.5rem;  margin-bottom: 15px; }
-.tabing-section .service-content-box p { font-size: 15px; line-height: 1.6; color: #d1d1e0; margin-bottom: 25px;}
+ .tabing-section .service-content-box h3 {  font-weight: 600;  font-size: 22px;  margin-bottom: 15px; }
+.tabing-section .service-content-box p { font-size: 13px; line-height: 1.6; color: #d1d1e0; margin-bottom: 25px;}
  .tabing-section .learn-more-link { color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 10px; transition: color 0.3s; }
  .tabing-section .learn-more-link:hover {color: #00A0E3;}
  /* Mobile specific fallback for the image */
@@ -119,9 +129,9 @@ section{padding-top: 60px; padding-bottom: 60px;}
 .three-box-section .img-under-bottom { margin-bottom: -30px;  }
         /* Typography & Icons inside the cards */
         /* */
-.three-box-section .text-box h4 { font-weight: 600; font-size: 19px; margin-bottom: 15px; width: 80%;  }
-.three-box-section .text-box p {font-size: 14px;line-height: 1.4;color: #FFFFFF;margin-bottom: 0; width: 90%;}
-.three-box-section .card-icon {position: absolute; top: 35px; right: 25px; width: 35px; }
+.three-box-section .text-box h4 { font-weight: 500; font-size: 17px; margin-bottom: 15px; width: 80%;  }
+.three-box-section .text-box p {font-size: 13px;font-weight: 300;line-height: 20px;color: #FFFFFF;margin-bottom: 0; width: 90%;}
+.three-box-section .card-icon {position: absolute; top: 10px; right: 25px; width: 30px; }
 
 
 
@@ -129,18 +139,20 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
 /* =============================== what-we-do-section ============================================= */
  /* Section Background with Image and Overlay */
- .what-we-do-section .main-title h2{color: #fff;}
- .what-we-do-section .main-title p{color: #fff;}
+ .what-we-do-section .main-title h2{color: #fff;text-transform: uppercase;}
+ .what-we-do-section .main-title p{color: #fff;font-weight: 300; line-height: 26px;}
  .what-we-do-section {  position: relative; background: linear-gradient( #332f60f5,  #332f60f5), 
                         url('./images/we-do-background-img.jpg'); background-size: cover; background-position: center; background-attachment: scroll; color: #ffffff;  }
         /* Top Heading Styles */
  .what-we-do-section .section-header {  margin-bottom: 60px;}
         /* Feature Column Styles */
-.what-we-do-section .feature-col {  position: relative;  padding: 0 25px;}
-.what-we-do-section .feature-icon { margin-bottom: 25px;color: #ffffff;}
-.what-we-do-section .feature-icon img{width: 40px;}
-.what-we-do-section .feature-col h3 { font-weight: 700;font-size: 19px;margin-bottom: 15px;}
-.what-we-do-section .feature-col p { font-size: 12px; color: #FFFFFF; line-height: 1.6; margin-bottom: 25px;}
+.what-we-do-section .feature-col {  position: relative;  padding: 0 45px;}
+.what-we-do-section .feature-col:first-child { padding-left: 0;}
+.what-we-do-section .feature-col:last-child { padding-right: 0;}
+.what-we-do-section .feature-icon { margin-bottom: 35px;color: #ffffff;}
+.what-we-do-section .feature-icon img{width: 35px;}
+.what-we-do-section .feature-col h3 { font-weight: 600;font-size: 19px;margin-bottom: 15px;}
+.what-we-do-section .feature-col p {font-weight: 300;font-size: 12px; color: #FFFFFF; line-height: 1.6; margin-bottom: 25px;}
         /* Learn More Link */
 .what-we-do-section .learn-more-link { color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s ease;}
 .what-we-do-section .learn-more-link:hover {color: #00a0df;  }
@@ -156,7 +168,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
         /* Individual Slide Styling */
 .destinations-section .swiper-slide {transition: all 0.4s ease; /* width: 300px !important;    transform: scale(0.9);   opacity: 0.85;*/ height: auto; display: flex; justify-content: center;}
         /* Active Slide Scaling Effect */
- .destinations-section .swiper-slide.swiper-slide-active {transform: scale(1.1); /* Enlarges the first/active slide */opacity: 1; z-index: 2; margin-right: 30px !important; margin-left: 20px !important;}
+ .destinations-section .swiper-slide.swiper-slide-active {transform: scale(1.1) translateY(-9px); /* Enlarges the first/active slide */opacity: 1; z-index: 2; margin-right: 30px !important; margin-left: 20px !important;}
         /* Card Container */
  .destinations-section .destination-card { position: relative; width: 100%; height: 190px; border-radius: 20px; background-color: #eee; box-shadow: 0 10px 25px rgba(0,0,0,0.1);}
         /* Background Image inside Card */
@@ -166,7 +178,7 @@ section{padding-top: 60px; padding-bottom: 60px;}
 .destinations-section .card-overlay { position: absolute; bottom: 0; left: 0; right: 0; height: 60%;
             /* background: linear-gradient(to top, rgba(16, 24, 65, 0.9), transparent); */ background: linear-gradient(180deg, rgba(17, 0, 83, 0) 0%, rgba(17, 0, 83, 0.5) 100%); border-radius: 0 0 20px 20px;}
         /* Card Title */
- .destinations-section .card-title {  position: absolute;  bottom: 15px;  left: 20px;  right: 20px;  color: #fff;  font-weight: 700;  font-size: 15px;  margin: 0;  text-align: center;}
+ .destinations-section .card-title {  position: absolute;  bottom: 15px;  left: 20px;  right: 20px;  color: #fff;  font-weight: 500;  font-size: 17px;  margin: 0;  text-align: center;}
 
         /* Floating Circle Flag Badge */
  .destinations-section .flag-badge { position: absolute; top: -30px;  left: 50%;  transform: translateX(-50%);  width: 70px;  height: 70px;  background-color: white;  border-radius: 50%;  display: flex;    align-items: center;  justify-content: center;  border: 1px solid #332F60;  box-shadow: 0 5px 15px rgba(0,0,0,0.08); z-index: 10; transition: all 0.4s ease;}
@@ -193,11 +205,11 @@ section{padding-top: 60px; padding-bottom: 60px;}
 
         /* Dark Purple Text Box */
 .scholarship-section .purple-text-box { background-color: #332F60; color: #ffffff; padding: 50px 45px;  margin-left: 20px;  position: relative;  z-index: 4;            margin-top: 80px;     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.15);  margin-bottom: -40px;}
-.scholarship-section .purple-text-box h2 {  font-weight: 700;  font-size: 25px;  margin-bottom: 20px;}
-.scholarship-section .purple-text-box p {  font-size: 14px;  line-height: 1.8;  color: #fff;  margin-bottom: 20px;}
+.scholarship-section .purple-text-box h2 {  font-weight: 700;  font-size: 23px;  margin-bottom: 20px;}
+.scholarship-section .purple-text-box p {  font-size: 14px;font-weight: 300;line-height:30px;  color: #fff;  margin-bottom: 20px;}
         /* Custom Bullet List */
 .scholarship-section .custom-bullet-list { list-style: none; padding-left: 0; margin-bottom: 30px;}
-.scholarship-section .custom-bullet-list li {  position: relative;  padding-left: 15px;  margin-bottom: 12px;  font-size: 17px; font-weight: 500;  color: #ffffff;}
+.scholarship-section .custom-bullet-list li {position: relative;padding-left: 15px;margin-bottom: 10px;font-size: 16px;font-weight: 500;color: #ffffff;}
 .scholarship-section .custom-bullet-list li::before { content: "•"; position: absolute;  left: 0;  top: -2px;  color: #ffffff;  font-size: 1.2rem;}
 
         /* Read More Link */
@@ -242,16 +254,16 @@ section{padding-top: 60px; padding-bottom: 60px;}
         /* Dark Purple Card */
  .why-choose-section .purple-card { background: #332F60F0;color: #ffffff; position: relative; z-index: 2; padding: 40px 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);}
         /* Left Side Text Content */
-.why-choose-section .purple-card h2 { font-weight: 700; font-size: 24px; margin-bottom: 10px; }
- .why-choose-section .purple-card p { font-size: 15px; line-height: 1.8; color: #fff;  margin-bottom: 20px;}
+.why-choose-section .purple-card h2 { font-weight: 700; font-size: 20px; margin-bottom: 10px; }
+ .why-choose-section .purple-card p {font-size: 12px;font-weight: 300;line-height: 26px;color: #fff;  margin-bottom: 20px;}
         /* Icon Grid Styling */
- .why-choose-section .icon-box {text-align: center;margin-bottom: 25px;}
- .why-choose-section .icon-box img{width: 35px; margin-bottom: 5px;}
+ .why-choose-section .icon-box {text-align: center;margin-bottom: 30px;}
+ .why-choose-section .icon-box img{width: 40px;height: 40px;margin-bottom: 5px;object-fit: contain;}
 .why-choose-section .icon-box i { font-size: 1.8rem; margin-bottom: 15px; color: #ffffff;}
- .why-choose-section .icon-box h6 {font-size: 15px;font-weight: 400;line-height: 1.4;color: #ffffff;margin: 0;}
+ .why-choose-section .icon-box h6 {font-size: 16px;font-weight: 400;line-height: 1.4;color: #ffffff;margin: 0;}
         /* Right Side Image Overlap Effect */
  .why-choose-section .image-col-wrapper { position: relative; height: 100%; width: 100%; min-height: 380px;  }
-  .why-choose-section .overlap-image { position: absolute; top: 20px;              bottom: -50px;          left: 25px;              right: 15px; width: calc(100% - 30px); height: calc(100% + 110px);   object-fit: cover; /* box-shadow: -10px 10px 30px rgba(0,0,0,0.3); */}
+  .why-choose-section .overlap-image { position: absolute; top: 20px; bottom: -50px;          left: 25px; right: 15px; width: calc(100% - 30px); height: calc(100% + 110px); object-fit: cover; /* box-shadow: -10px 10px 30px rgba(0,0,0,0.3); */}
 
 
 
@@ -263,7 +275,7 @@ section.testimonials-section{padding-top: 80px;}
         /* Swiper Container */
 .testimonials-section .swiper-container {width: 100%; padding: 20px 10px 40px 10px; }
         /* Testimonial Card Styling */
-.testimonials-section .testi-card { background: #ffffff; border-radius: 12px;  box-shadow: 2.34px 2.34px 17px 0px #00000030; text-align: center; position: relative; overflow: visible;   }
+.testimonials-section .testi-card { background: #ffffff; border-radius: 12px;  box-shadow: 2.34px 2.34px 17px 0px #00000030; text-align: center; position: relative; overflow: visible;height: 100%;}
         /* The Curved Dark Purple Top */
 .testimonials-section .card-top {background-color: #332F60;color: white; padding: 25px 20px 55px 20px;  border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 50% 25px; border-bottom-right-radius: 50% 25px; }
  .testimonials-section .card-top h6 { font-size: 12px; font-weight: 600; margin-bottom: 8px; letter-spacing: 0.5px;}
@@ -300,8 +312,8 @@ section.testimonials-section{padding-top: 80px;}
         /* Arrow hover effect */
 .contact-section  .btn-talk-expert:hover i { transform: translateX(5px);}
         /* Bottom Copyright Strip */
- .copyright-strip { background-color: #332F60;  padding: 20px 0; text-align: center;}
-  .copyright-strip p { margin: 0; color: #fff; font-size: 12px; font-weight: 400; letter-spacing: 0.3px;}
+ .copyright-strip { background-color: #332F60;  padding: 25px 0; text-align: center;}
+  .copyright-strip p { margin: 0; color: #fff; font-size: 11px; font-weight: 300; letter-spacing: 0.3px;}
 
 
         /* Responsive spacing for mobile */
@@ -328,8 +340,7 @@ section.testimonials-section{padding-top: 80px;}
         }
 
  @media (min-width: 992px) {
-     .what-we-do-section .feature-col:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 80px;  bottom: 20px;  width: 1px; background-color: #FFFFFF; /* Faint white line */}
-}
+     .what-we-do-section .feature-col:not(:last-child)::after {content: '';position: absolute;right: 0;top: 0;bottom: 0;width: 1px;background-color: #FFFFFF;height: 75%;margin: auto;}}
         /* Responsive Adjustments for Mobile/Tablet */
         @media (max-width: 991px) {
             .scholarship-section .purple-text-box { margin-top: 0; margin-bottom: -50px;  }
@@ -345,7 +356,11 @@ section.testimonials-section{padding-top: 80px;}
             .tabing-section .overlap-container { flex-direction: column;}
             .tabing-section .overlap-content-box { width: 100%; padding: 30px;}
             .tabing-section .overlap-image-box { width: 100%; margin-left: 0; height: 250px;}
-             .what-we-do-section .feature-col {margin-bottom: 40px; padding: 0 15px;}
+             .what-we-do-section .feature-col {margin-bottom: 40px; padding: 10px;}
+             .what-we-do-section .learn-more-link img{filter: brightness(3);}
+             .destinations-section .swiper-slide.swiper-slide-active .card-title{text-align: center !important;font-size: 16px !important;}
+             .destinations-section .flag-badge{width: 60px; height: 60px;}
+             .destinations-section .flag-badge img {width: 38px;}
      .what-we-do-section .feature-col:last-child {  margin-bottom: 0; }
  }
 /* ====================================================================== */
@@ -355,35 +370,40 @@ section.testimonials-section{padding-top: 80px;}
             .hero-heading { font-size: 2.5rem; }
             .info-item { border-right: none; margin-bottom: 15px; justify-content: flex-start; padding-left: 20px;}
             .info-item:last-child { margin-bottom: 0; }
-            .floating-info-bar { position: relative; bottom: 0; left: 0; right: 0; margin-top: 20px; border-radius: 20px;}
+            .floating-info-bar { position: relative; bottom: 0; left: 0; right: 0; margin-top: 20px; border-radius: 20px;width: 100%;}
             .hero-bg { padding-bottom: 60px; border-radius: 20px;}
         }
 
+ .destinations-section .swiper-slide.swiper-slide-active .card-title{text-align: left;font-size: 18px;font-weight: 500;}
 @media (max-width:767px){
-    .main-title p{font-size: 13px;}
+    .main-title p{font-size: 12px; line-height: 22px !important;}
      .main-title h2{font-size: 22px;}
     br{display: none;}
     section{padding-bottom: 30px; padding-top: 30px;}
     .info-item:last-child{margin-bottom: 10px;}
     .tabing-section .services-tabs .nav-link{margin-bottom: 10px;}
     .tabing-section .services-tabs{margin-top: unset;}
-    .tabing-section .service-content-box{padding: 30px 40px; min-height: 300px;}
+    .tabing-section .service-content-box{padding: 30px 40px; min-height: 240px;justify-content: flex-start;}
     .what-we-do-section .feature-col{text-align: center; align-items: center;}
     .scholarship-section .purple-text-box{margin-left: 40px; margin-top: 40px; margin-right: 40px;}
     .scholarship-section .overlap-wrapper::before{left: 0; right: 0;}
     .scholarship-section .image-container{margin-left: 10px; margin-right: 10px; margin-bottom: 10px;}
     .scholarship-section .image-container img{width: 100%;}
-    .partners-section .partner-card{height: 50px; padding: 10px;}
+    .partners-section .partner-card{height: 50px; padding: 5px;}
     .partners-section .swiper-container{padding: 10px 0;}
-    .why-choose-section .overlap-image{top: 0; bottom: 0; left: 0; right: 0; height: calc(100% + 0px); width: 100%;}
+    .why-choose-section .overlap-image{top: 0; bottom: 0; left: 0; right: 0; height: calc(100% + 0px); width: 100%;border-radius: 5px;}
     .why-choose-section .purple-card{padding: 20px 20px;}
     .three-box-section .container .row{gap: 20px;}
     .three-box-section .text-box.box-bottom{    border-bottom-right-radius: 20px; border-top-right-radius:unset;}
     .what-we-do-section .section-header{margin-bottom: unset;}
     .scholarship-section .purple-text-box{padding: 15px 15px; margin-left: 10px; margin-top: 10px; margin-right: 10px;}
     .scholarship-section .purple-text-box h2{margin-bottom: 10px; font-size: 19px;}
-    .scholarship-section .purple-text-box p{font-size: 13px; margin-bottom: 10px;}
-    .scholarship-section .custom-bullet-list li{font-size: 15px; margin-bottom: 10px;}
+    .scholarship-section .purple-text-box p{font-size: 12px; margin-bottom: 10px;line-height: 22px;}
+    .scholarship-section .read-more-link{font-size: 13px;}
+    .scholarship-section .custom-bullet-list li{font-size: 14px; margin-bottom: 10px;}
+    .partners-section{padding-top: 0px;padding-bottom: 0;}
+    .purple-card .row{justify-content: center;}
+    .purple-card .row.text-center{margin-bottom: 20px;}
     .scholarship-section .custom-bullet-list{margin-bottom: 20px;}
     .why-choose-section::before{content: unset;}
     .why-choose-section .purple-card h2{font-size: 22px;}
@@ -391,43 +411,46 @@ section.testimonials-section{padding-top: 80px;}
     .why-choose-section .icon-box{margin-bottom: 15px;}
     .why-choose-section .icon-box img{width: 25px;}
     .why-choose-section .icon-box h6{font-size: 13px;}
-    section.testimonials-section{padding-top: 30px;}
+    section.testimonials-section{padding-top: 10px;}
     .testimonials-section .swiper-container{padding: 10px;}
     .contact-form .row > div{margin-bottom:10px;}
 .contact-section .minimal-input{font-size:16px; padding: 10px 5px 10px 5px;}
-.contact-section .btn-talk-expert{padding: 10px 20px;font-size: 16px;margin-top: 10px;	}
+.contact-section .btn-talk-expert{padding: 10px 20px;font-size: 13px;margin-top: 10px;border: 1px solid #0d437570;border-radius: 3px;}
  .destinations-section .swiper-slide.swiper-slide-active{margin-right: 30px !important; margin-left: 10px !important;}
  .scholarship-section .overlap-wrapper::after{content: unset;}
  .form-card form .row .col-md-6:last-child{    padding-left: 12px;}
  .form-card form .row .col-md-6:first-child{    padding-right: 12px;}
 
 }
+.mySwiper .swiper-slide{height: unset;}
 @media (max-width: 575px){
     .navbar-custom  .logo img{width: 130px; height: auto;}
     .btn-call-now{padding: 7px 12px; font-size: 10px;}
     .hero-bg{border-radius: 15px;padding: 40px 4% 40px 4%;}
-.hero-heading{font-size: 23px; text-align: center;}
-.hero-subheading{font-size: 15px; text-align: center; max-width: 100%;}
+.hero-heading{font-size: 23px; text-align: center;font-weight: 700;line-height: 28px;margin-bottom: 5px;}
+.hero-subheading{font-size: 14px; text-align: center; max-width: 100%;}
 .form-card{padding: 15px;border-radius: 15px;}
-.form-card h3{font-size: 20px;}
-.btn-submit{font-size: 14px;}
+.form-card h3{font-size: 16px; font-weight: 700;}
+.form-card p{font-size: 11px;}
+.form-control, .form-select{padding: 10px;}
+.btn-submit{font-size: 14px;padding: 10px;} 
 .hero-container{margin: 0 4% 0px 4%;}
 .info-text{font-size:14px;}
-.info-item{padding-left:15px;}
-.floating-info-bar{margin-top: 15px;border-radius: 15px;padding: 15px 0;}
-.info-icon img{width: 25px;}
+.info-item{padding-left:0px;}
+.floating-info-bar{margin-top: 15px;border-radius: 15px;padding: 15px 0;width: 100%;}
+.info-icon img{width: 25px;height: 25px;object-fit: contain;}
 .tabing-section{padding-top: 30px !important;}
 .tabing-section .services-tabs .nav-link{font-size: 16px; padding: 10px 15px;}
 .tabing-section .service-content-box p{margin-bottom:15px;}
-.tabing-section .service-content-box h3{font-size: 20px;margin-bottom: 5px;}
+.tabing-section .service-content-box h3{font-size: 20px;margin-bottom: 15px;}
 .tabing-section .service-content-box .overlap-icon img{width: 30px;}
 .tabing-section .service-content-box .overlap-icon{margin-bottom: 10px;}
-.tabing-section .service-content-box{padding: 20px 20px;}
+.tabing-section .service-content-box{padding: 20px;}
 .three-box-section .prog-card{border-radius: 20px 0px 0px 20px;}
 .three-box-section .text-box{padding: 20px 20px;}
 .three-box-section .card-icon{top: 15px; right: 15px; width: 25px;}
-.three-box-section .text-box p{font-size: 13px;}
-.three-box-section .text-box h4{margin-bottom: 10px;}
+.three-box-section .text-box p{font-size: 11px;}
+.three-box-section .text-box h4{margin-bottom: 10px;font-size: 15px;}
 .what-we-do-section .feature-col{margin-bottom: 20px;}
  .what-we-do-section .feature-icon,.what-we-do-section .feature-col p{margin-bottom: 10px;}
 .what-we-do-section .feature-col h3{font-size: 18px; margin-bottom: 10px;}
@@ -440,7 +463,7 @@ section.testimonials-section{padding-top: 80px;}
         <div class="logo">
             <img src="./images/scholar-ship logo (1).png" alt="Scholarship Kart Logo" height="50">
         </div>
-        <a href="#" class="btn-call-now">Call Now To Get Started</a>
+        <a href="#" class="btn-call-now">Book Free Counselling</a>
     </nav>
 
 <!-- ================================== Hero Section =========================================== -->
@@ -525,7 +548,7 @@ section.testimonials-section{padding-top: 80px;}
 
 <section class="tabing-section">
     <div class="container">
-        <div class="text-center main-title">
+        <div class="text-center main-title pb-md-4">
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">Trained by the globally recognised universities to help students secure admissions faster.</p>
         </div>
@@ -561,11 +584,11 @@ section.testimonials-section{padding-top: 80px;}
                                 </div>
                                 <h3>Planning Stage</h3>
                                 <p>ScholarshipKart is an IT-enabled education consultancy focused on helping students plan their international education with accurate, real-time information on universities.</p>
-                                <div>
+                                <!-- <div>
                                     <a href="#" class="learn-more-link">Learn More 
                                         <!-- <i class="fa-solid fa-arrow-right-long"></i>  -->
-                                        <img src="./images/arrow.png" alt="arrow"> </a>
-                                </div>
+                                      <!--    <img src="./images/arrow.png" alt="arrow"> </a>
+                                </div> -->
                             </div>
                         </div>
 
@@ -577,11 +600,11 @@ section.testimonials-section{padding-top: 80px;}
                                 </div>
                                 <h3>Application Stage</h3>
                                 <p>We assist you in building a strong profile, shortlisting the right universities, and meticulously preparing all necessary documentation to ensure a flawless application process.</p>
-                                <div>
+                                <!-- <div>
                                     <a href="#" class="learn-more-link">Learn More 
                                         <!-- <i class="fa-solid fa-arrow-right-long"></i>  -->
-                                        <img src="./images/arrow.png" alt="arrow"> </a>
-                                </div>
+                                      <!--    <img src="./images/arrow.png" alt="arrow"> </a>
+                                </div> -->
                             </div>
                         </div>
 
@@ -593,11 +616,11 @@ section.testimonials-section{padding-top: 80px;}
                                 </div>
                                 <h3>Execution Stage</h3>
                                 <p>From visa interview preparation to securing accommodations and pre-departure briefings, we ensure you are fully prepared for your journey abroad.</p>
-                                <div>
+                               <!-- <div>
                                     <a href="#" class="learn-more-link">Learn More 
                                         <!-- <i class="fa-solid fa-arrow-right-long"></i>  -->
-                                        <img src="./images/arrow.png" alt="arrow"> </a>
-                                </div>
+                                      <!--    <img src="./images/arrow.png" alt="arrow"> </a>
+                                </div> -->
                             </div>
                         </div>
 
@@ -769,7 +792,7 @@ section.testimonials-section{padding-top: 80px;}
                         <div class="swiper-slide">
                             <div class="destination-card">
                                 <div class="flag-badge">
-                                    <img src="./images/map-1.png" alt="UK Flag">
+                                    <img src="images/england.png" alt="UK Flag">
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/UK-1.jpg');">
                                     <div class="card-overlay"></div>
@@ -778,7 +801,7 @@ section.testimonials-section{padding-top: 80px;}
                             </div>
                         </div>
 
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <div class="destination-card">
                                 <div class="flag-badge">
                                     <img src="./images/map-2.png" alt="Canada Flag">
@@ -788,36 +811,12 @@ section.testimonials-section{padding-top: 80px;}
                                     <h3 class="card-title">Study in Canada</h3>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="swiper-slide">
                             <div class="destination-card">
                                 <div class="flag-badge">
-                                    <img src="./images/map-3.png" alt="Australia Flag">
-                                </div>
-                                <div class="card-bg-img" style="background-image: url('./images/Australia-3.jpg');">
-                                    <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in Australia</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="destination-card">
-                                <div class="flag-badge">
-                                    <img src="./images/map-4.png" alt="Ireland Flag">
-                                </div>
-                                <div class="card-bg-img" style="background-image: url('./images/ireland-4.jpg');">
-                                    <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in Ireland</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="destination-card">
-                                <div class="flag-badge">
-                                    <img src="./images/map-4.png" alt="USA Flag">
+                                    <img src="images/USA.png" alt="USA Flag">
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/malasiya-5.jpg');">
                                     <div class="card-overlay"></div>
@@ -829,23 +828,11 @@ section.testimonials-section{padding-top: 80px;}
                         <div class="swiper-slide">
                             <div class="destination-card">
                                 <div class="flag-badge">
-                                    <img src="./images/map-4.png" alt="USA Flag">
-                                </div>
-                                <div class="card-bg-img" style="background-image: url('./images/canada-2.jpg');">
-                                    <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in USA 2</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="destination-card">
-                                <div class="flag-badge">
-                                    <img src="./images/map-4.png" alt="USA Flag">
+                                    <img src="images/australia.png" alt="Australia Flag">
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/Australia-3.jpg');">
                                     <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in USA 3</h3>
+                                    <h3 class="card-title">Study in Australia</h3>
                                 </div>
                             </div>
                         </div>
@@ -853,11 +840,47 @@ section.testimonials-section{padding-top: 80px;}
                         <div class="swiper-slide">
                             <div class="destination-card">
                                 <div class="flag-badge">
-                                    <img src="./images/map-4.png" alt="USA Flag">
+                                    <img src="images/ireland.png" alt="Ireland Flag">
                                 </div>
                                 <div class="card-bg-img" style="background-image: url('./images/ireland-4.jpg');">
                                     <div class="card-overlay"></div>
-                                    <h3 class="card-title">Study in USA 4</h3>
+                                    <h3 class="card-title">Study in Ireland</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="destination-card">
+                                <div class="flag-badge">
+                                    <img src="images/malaysia.png" alt="Malaysia Flag">
+                                </div>
+                                <div class="card-bg-img" style="background-image: url('./images/canada-2.jpg');">
+                                    <div class="card-overlay"></div>
+                                    <h3 class="card-title">Study in Malaysia</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="destination-card">
+                                <div class="flag-badge">
+                                    <img src="images/singapore.png" alt="Singapore Flag">
+                                </div>
+                                <div class="card-bg-img" style="background-image: url('./images/Australia-3.jpg');">
+                                    <div class="card-overlay"></div>
+                                    <h3 class="card-title">Study in Singapore</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="destination-card">
+                                <div class="flag-badge">
+                                    <img src="images/dubai.png" alt="Dubai Flag">
+                                </div>
+                                <div class="card-bg-img" style="background-image: url('./images/ireland-4.jpg');">
+                                    <div class="card-overlay"></div>
+                                    <h3 class="card-title">Study in Dubai</h3>
                                 </div>
                             </div>
                         </div>
@@ -918,29 +941,41 @@ section.testimonials-section{padding-top: 80px;}
             
             <div class="swiper swiper-container top-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/Logo-1.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-3.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-4.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-5.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-6.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-7.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-8.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Lancaster-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Warwick-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Middlesex-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Oxford-univeristy.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Imperial-University.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Southampton-University.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/King's-College-London.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Hariot Watt-University.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Cambridge.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/UCL.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Menchester.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Glasgow.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Queen-Marry-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Liverpool.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Bath.png" alt="Partner"></div></div>
                 </div>
             </div>
 
             <div class="swiper swiper-container bottom-swiper bottom-row">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/Logo-1.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-3.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-4.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-5.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-6.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-7.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-2.png" alt="Partner"></div></div>
-                    <div class="swiper-slide"><div class="partner-card"><img src="./images/logo-8.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Lancaster-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Warwick-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Middlesex-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Oxford-univeristy.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Imperial-University.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Southampton-University.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/King's-College-London.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Hariot Watt-University.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Cambridge.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/UCL.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Menchester.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Glasgow.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/Queen-Marry-university.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Liverpool.png" alt="Partner"></div></div>
+                    <div class="swiper-slide"><div class="partner-card"><img src="images/University-of-Bath.png" alt="Partner"></div></div>
                 </div>
             </div>
 
@@ -985,14 +1020,14 @@ section.testimonials-section{padding-top: 80px;}
                             </div>
                             
                             <div class="col-6 col-md-4">
-                                <div class="icon-box">
+                                <div class="icon-box mb-0">
                                     <!-- <i class="fa-solid fa-chalkboard-user"></i> -->
                                      <img src="./images/choose-icon-4.png" alt="icon">
                                     <h6>In-house IELTS<br>coaching</h6>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4">
-                                <div class="icon-box">
+                                <div class="icon-box mb-0">
                                     <!-- <i class="fa-solid fa-graduation-cap"></i> -->
                                      <img src="./images/choose-icon-5.png" alt="icon">
                                     <h6>Scholarship<br>access</h6>
@@ -1031,22 +1066,22 @@ section.testimonials-section{padding-top: 80px;}
                     <div class="swiper-slide">
                         <div class="testi-card">
                             <div class="card-top">
-                                <h6>University name</h6>
+                                <h6>University of Birmingham </h6>
                                 <div class="stars">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
                                 </div>
                             </div>
                             <div class="profile-img-wrapper">
-                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                                <img src="images/nimit.png" alt="Dazzle Healer">
                             </div>
                             <div class="card-bottom">
-                                <h5>Dazzle Healer</h5>
-                                <p class="designation">Front End Developer</p>
-                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                                <h5>Nimit Patel</h5>
+                                <!-- <p class="designation">Front End Developer</p> -->
+                                <p class="review">Dubai -university of birmingham -msc Acc and Finance ( I am truly grateful to Sunita Ma’am for her constant support and guidance throughout my master’s application process. From the very beginning, she explained every step clearly and helped me prepare strong applications. She was always approachable, patient, and professional, answering all my questions with care Thanks to her dedicated efforts I successfully secured admission for my Master’s in Dubai I highly recommend Sunita Ma’am to anyone looking for expert guidance in their higher education journey.)</p>
                             </div>
                         </div>
                     </div>
@@ -1054,22 +1089,22 @@ section.testimonials-section{padding-top: 80px;}
                     <div class="swiper-slide">
                         <div class="testi-card">
                             <div class="card-top">
-                                <h6>University name</h6>
+                                <h6>University Of Strathclyde</h6>
                                 <div class="stars">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
                                 </div>
                             </div>
                             <div class="profile-img-wrapper">
-                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                                <img src="images/Kashmira_Strath.png" alt="Dazzle Healer">
                             </div>
                             <div class="card-bottom">
-                                <h5>Dazzle Healer</h5>
-                                <p class="designation">Front End Developer</p>
-                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                                <h5>Kashmira Patil</h5>
+                                <!-- <p class="designation">Front End Developer</p> -->
+                                <p class="review">University Of Strathclyde -UK - MSc Advanced Construction Technologies and BIM</p>
                             </div>
                         </div>
                     </div>
@@ -1077,22 +1112,22 @@ section.testimonials-section{padding-top: 80px;}
                     <div class="swiper-slide">
                         <div class="testi-card">
                             <div class="card-top">
-                                <h6>University name</h6>
+                                <h6>Uni of Nottingham</h6>
                                 <div class="stars">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
                                 </div>
                             </div>
                             <div class="profile-img-wrapper">
-                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                                <img src="images/testimonial-img.jpg" alt="Dazzle Healer">
                             </div>
                             <div class="card-bottom">
-                                <h5>Dazzle Healer</h5>
-                                <p class="designation">Front End Developer</p>
-                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                                <h5>Kejal Manoj Pardeshi</h5>
+                                <!-- <p class="designation">Front End Developer</p> -->
+                                <p class="review">Uni of Nottingham -UK - MSc Sports and Exercise Medicine  ( I have had a lovely experience with scholarshipkart and sunita ma'am. She is amazing at what she does and will guide you through this process and make it as smooth for you as possible. With clear information from the beginning and regular updates about the process I cannot thank her enough for her support throughout.)</p>
                             </div>
                         </div>
                     </div>
@@ -1100,22 +1135,22 @@ section.testimonials-section{padding-top: 80px;}
                     <div class="swiper-slide">
                         <div class="testi-card">
                             <div class="card-top">
-                                <h6>University name</h6>
+                                <h6>SKema Business school</h6>
                                 <div class="stars">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
                                 </div>
                             </div>
                             <div class="profile-img-wrapper">
-                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                                <img src="images/testimonial-img.jpg" alt="Dazzle Healer">
                             </div>
                             <div class="card-bottom">
-                                <h5>Dazzle Healer</h5>
-                                <p class="designation">Front End Developer</p>
-                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
+                                <h5>Mishka Tillu</h5>
+                                <!-- <p class="designation">Front End Developer</p> -->
+                                <p class="review">SKema Business school -France - Msc International Marketing and Business Development</p>
                             </div>
                         </div>
                     </div>
@@ -1123,48 +1158,25 @@ section.testimonials-section{padding-top: 80px;}
                     <div class="swiper-slide">
                         <div class="testi-card">
                             <div class="card-top">
-                                <h6>University name</h6>
+                                <h6>MET Film School</h6>
                                 <div class="stars">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
+                                    <img src="images/Star.png" alt="Star">
                                 </div>
                             </div>
                             <div class="profile-img-wrapper">
-                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
+                                <img src="images/testimonial-img.jpg" alt="Dazzle Healer">
                             </div>
                             <div class="card-bottom">
-                                <h5>Dazzle Healer</h5>
-                                <p class="designation">Front End Developer</p>
-                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p> 
+                                <h5>Ameya Gill</h5>
+                                <!-- <p class="designation">Front End Developer</p> -->
+                                <p class="review">MET Film School - BA Film -cant get her photo -she is high profile bollywood family gal</p> 
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                        <div class="testi-card">
-                            <div class="card-top">
-                                <h6>University name</h6>
-                                <div class="stars">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                    <img src="./images/Star.png" alt="Star">
-                                </div>
-                            </div>
-                            <div class="profile-img-wrapper">
-                                <img src="./images/testimonial-img.jpg" alt="Dazzle Healer">
-                            </div>
-                            <div class="card-bottom">
-                                <h5>Dazzle Healer</h5>
-                                <p class="designation">Front End Developer</p>
-                                <p class="review">I've used other kits, but this one is the best. The attention to detail and usability are truly amazing.</p>
-                            </div>
-                        </div>
-                    </div>
+                    </div> 
 
                 </div>
             </div>
@@ -1195,7 +1207,7 @@ section.testimonials-section{padding-top: 80px;}
                 </div>
 
                 <button type="submit" class="btn-talk-expert">
-                    Talk to Expert <img src="./images/arrow.png" alt="Arrow">
+                    Talk to Expert <img src="./images/arrow.png" alt="Arrow" style="filter: brightness(0) saturate(100%) invert(18%) sepia(94%) saturate(749%) hue-rotate(192deg) brightness(92%) contrast(95%);">
                 </button>
             </form>
 
@@ -1213,7 +1225,7 @@ section.testimonials-section{padding-top: 80px;}
 
 
 
-<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+<a href="https://wa.me/9990038282" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
      <i class="fab fa-whatsapp"></i>
 </a>
 
