@@ -1251,9 +1251,107 @@ section.testimonials-section{padding-top: 80px;}
 <a href="https://wa.me/9990038282" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
      <i class="fab fa-whatsapp"></i>
 </a>
+<style>
+    .custom-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; display: flex;              /* 👈 IMPORTANT */
+  align-items: center;        /* vertical center */
+  justify-content: center;    /* horizontal center */
+}
 
+.popup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
 
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+}
 
+.popup-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 32px;
+  cursor: pointer;
+}.popup-inner {
+  text-align: center;
+} 
+.popup-flex {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.popup-left {
+  flex: 0 0 120px;
+}
+
+.popup-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;border: 1px solid #ddd;
+}
+
+.popup-right {
+  flex: 1;
+}
+
+.popup-title {
+  color: #0D4375;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.popup-stars {
+  margin: 2px 0px 10px; color: #f4b400;
+}
+.popup-stars img{width: 14px;}
+
+.popup-text {
+  line-height: 1.6;font-size: 12px;
+}
+.popup-right h4{font-size: 18px;
+    font-weight: 700;
+    color: #0F1125;
+    margin-bottom: 2px;}
+@media (max-width: 576px) {.custom-popup{align-items: inherit;}
+  .popup-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .popup-left {
+    flex: unset;
+  }.popup-content{height: 80%;}
+}
+</style>
+
+<div class="custom-popup" style="display:none;">
+  <div class="popup-overlay"></div>
+
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <div class="popup-body"></div>
+  </div>
+</div>
 
 
 
@@ -1391,18 +1489,62 @@ section.testimonials-section{padding-top: 80px;}
 //     });
 // });
 
+// OPEN POPUP
 $('.moreless-button').click(function(e) {
     e.preventDefault();
 
+    const card = $(this).closest('.testi-card');
     const parent = $(this).closest('.card-bottom');
-    const moreText = parent.find('.moretext');
 
-    if (moreText.css('display') === 'none') {
-        moreText.css('display', 'inline'); // 👈 force block
-        $(this).text('Read less');
-    } else {
-        moreText.css('display', 'none');
-        $(this).text('Read more');
+    const name = parent.find('h5').text();
+    const title = card.find('.card-top h6').text();
+
+    const shortText = parent.find('.review').first().text();
+    const fullText = parent.find('.moretext').text();
+
+    const imgSrc = card.find('.profile-img-wrapper img').attr('src');
+
+    // ⭐ Get stars dynamically
+    const stars = card.find('.stars').html();
+
+    const finalContent = `
+        <div class="popup-flex">
+            <div class="popup-left">
+                <img src="${imgSrc}" class="popup-img" alt="${name}">
+            </div>
+
+            <div class="popup-right">
+                <h4>${name}</h4>
+                <p class="popup-title"><strong>${title}</strong></p>
+
+                <div class="popup-stars">
+                    ${stars}
+                </div>
+
+                <p class="popup-text">${shortText} ${fullText}</p>
+            </div>
+        </div>
+    `;
+
+    $('.popup-body').html(finalContent);
+    $('.custom-popup').fadeIn();
+
+    $('body').addClass('popup-open'); // 🔒 lock scroll
+});
+
+
+// CLOSE POPUP (overlay + close button)
+$('.popup-close, .popup-overlay').click(function() {
+    $('.custom-popup').fadeOut();
+    $('body').removeClass('popup-open'); // 🔓 restore scroll
+});
+
+
+// ESC KEY CLOSE
+$(document).keyup(function(e) {
+    if (e.key === "Escape") {
+        $('.custom-popup').fadeOut();
+        $('body').removeClass('popup-open');
     }
 });
 </script>
