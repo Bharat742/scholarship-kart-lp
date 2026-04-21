@@ -455,6 +455,25 @@ section.testimonials-section{padding-top: 80px;}
  .what-we-do-section .feature-icon,.what-we-do-section .feature-col p{margin-bottom: 10px;}
 .what-we-do-section .feature-col h3{font-size: 18px; margin-bottom: 10px;}
 }
+.testi-card {
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+}
+
+.review {
+  display: inline;
+}.moretext {
+  display: none;
+}.moreless-button {
+  display: inline;
+  color: #332F60;
+    font-size: 12px;
+    text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
     </style>
 </head>
 <body>
@@ -1081,7 +1100,9 @@ section.testimonials-section{padding-top: 80px;}
                             <div class="card-bottom">
                                 <h5>Nimit Patel</h5>
                                 <!-- <p class="designation">Front End Developer</p> -->
-                                <p class="review">Dubai -university of birmingham -msc Acc and Finance ( I am truly grateful to Sunita Ma’am for her constant support and guidance throughout my master’s application process. From the very beginning, she explained every step clearly and helped me prepare strong applications. She was always approachable, patient, and professional, answering all my questions with care Thanks to her dedicated efforts I successfully secured admission for my Master’s in Dubai I highly recommend Sunita Ma’am to anyone looking for expert guidance in their higher education journey.)</p>
+                                <p class="review">Dubai -university of birmingham -msc Acc and Finance ( I am truly grateful to Sunita</p>
+                                <p class="moretext review"> Ma’am for her constant support and guidance throughout my master’s application process. From the very beginning, she explained every step clearly and helped me prepare strong applications. She was always approachable, patient, and professional, answering all my questions with care Thanks to her dedicated efforts I successfully secured admission for my Master’s in Dubai I highly recommend Sunita Ma’am to anyone looking for expert guidance in their higher education journey.)</p>
+                                <a class="moreless-button" href="#" style="position: relative;z-index: 9;">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -1127,7 +1148,9 @@ section.testimonials-section{padding-top: 80px;}
                             <div class="card-bottom">
                                 <h5>Kejal Manoj Pardeshi</h5>
                                 <!-- <p class="designation">Front End Developer</p> -->
-                                <p class="review">Uni of Nottingham -UK - MSc Sports and Exercise Medicine  ( I have had a lovely experience with scholarshipkart and sunita ma'am. She is amazing at what she does and will guide you through this process and make it as smooth for you as possible. With clear information from the beginning and regular updates about the process I cannot thank her enough for her support throughout.)</p>
+                                <p class="review">Uni of Nottingham -UK - MSc Sports and Exercise Medicine  ( I have had a lovely</p>
+                                <p class="moretext review"> experience with scholarshipkart and sunita ma'am. She is amazing at what she does and will guide you through this process and make it as smooth for you as possible. With clear information from the beginning and regular updates about the process I cannot thank her enough for her support throughout.)</p>
+                                <a class="moreless-button" href="#" style="position: relative;z-index: 9;">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -1244,6 +1267,7 @@ section.testimonials-section{padding-top: 80px;}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- <script>
      const studySwiper = new Swiper('.study-main-swiper', {
     loop: true,
@@ -1353,6 +1377,34 @@ section.testimonials-section{padding-top: 80px;}
             }
         });
     </script>
+<script>
+//     $('.moreless-button').click(function(e) {
+//     e.preventDefault();
 
+//     const parent = $(this).closest('.card-bottom');
+//     const moreText = parent.find('.moretext');
+
+//     moreText.slideToggle();
+
+//     $(this).text(function(i, text){
+//         return text === "Read more" ? "Read less" : "Read more";
+//     });
+// });
+
+$('.moreless-button').click(function(e) {
+    e.preventDefault();
+
+    const parent = $(this).closest('.card-bottom');
+    const moreText = parent.find('.moretext');
+
+    if (moreText.css('display') === 'none') {
+        moreText.css('display', 'inline'); // 👈 force block
+        $(this).text('Read less');
+    } else {
+        moreText.css('display', 'none');
+        $(this).text('Read more');
+    }
+});
+</script>
 </body>
 </html>
